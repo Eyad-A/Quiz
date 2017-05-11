@@ -2,13 +2,132 @@
   display: none;
 }
 
-img {
-  height: 400px;
-  width: 700;
-  margin: 0;
-  padding: 0;
+.float_center {
+  float: right;
+  position: relative;
+  left: -50%;
+  text-align: left;
 }
 
-.credit {
-  font-size: 8px;  
+.float_center > .child {
+  position: relative;
+  left: 50%;
+}
+
+.clear {
+  clear: both;
+}
+
+#prev {
+  float: left;
+  margin: 3px;
+}
+
+#next {
+  float: left;
+  margin: 3px;
+}
+
+img {
+  width: 100%;
+}
+
+.page-header {
+  background-color: orange;
+  padding: 10px;
+}
+
+#suggestion {
+  background-color: gray;
+  padding: 10px;  
+}
+
+#main {
+  background-color: gray;
+  padding: 10px;  
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+/* Hide those ugly radioboxes */
+input[type=radio]{
+  display: none;
+}
+
+/**
+ * How it should look when hovered
+ */
+.active-label{
+  color: #e0758e;
+
+  &:before{
+    background: white;
+    border-color: #e0758e;
+  }
+}
+
+/**
+ * Make those labels sexy
+ */
+label{
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  display: block;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+  border-top: 1px solid rgba(black,.1);
+  background: white;
+  whitespace: no-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all .15s ease;
+
+  &:focus,
+  &:hover,
+  &:active{
+    @extend .active-label;
+  }
+
+  &:first-of-type{
+    border: 0;
+  }
+  
+  
+}
+
+/**
+ * How it should look when checked
+ */
+input:checked + label{ 
+  @extend .active-label;
+  background-color: #e0758e;
+  color: white;
+
+  &:before{
+    border-color: white;
+    border: none;
+    background: #e0758e;
+  }
+}
+
+/**
+ * How it should look when disabled
+ */
+input:disabled + label{ 
+  background: #efefef;
+  color: rgba(black,.5);
+  cursor: not-allowed;
+
+  &:hover{
+    border-color: rgba(black,.1);
+  }
+
+  &:before{
+    border-color: white;
+    background: white;
+  }
 }

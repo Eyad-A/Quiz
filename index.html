@@ -1,49 +1,78 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>What kind of car should I buy?</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascript.js"></script>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <script type="text/javascript" src="javascript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
-  <h1>What kind of car should I buy?</h1>  
-    <div id="suggestion"></div>
-
-  <div>
+   <div class="container-fluid">     
+    <div class="row text-center">
+      <div class="col-md-2"></div>
+       <div class="col-md-8">
+         <div class="page-header text-center"><h1>What kind of car should I buy?</h1></div>
+     <div id="suggestion"></div>
+    <div id="main">
     <form id="form" action="">
-    <div id="question1">
-    <p>What size do you need?</p>
-    <input type="radio" name="name1" value="compact">Compact<br>
-    <input type="radio" name="name1" value="mid">Midsize<br>
-    <input type="radio" name="name1" value="small">Small SUV<br>
-    <input type="radio" name="name1" value="med">Medium SUV<br>
-    <input type="radio" name="name1" value="big">Big SUV
-    </div>
+      
+     <div id="question1">
+      <p><h4>What size do you need?</h4></p>      
+      <div>
+      <input type="radio" name="name1" value="compact" id="compact">
+        <label for="compact">Compact</label>
+      <input type="radio" name="name1" value="mid" id="midsize">
+        <label for="midsize">Midsize</label>
+      <input type="radio" name="name1" value="small" id="small">
+        <label for="small">Small SUV</label>
+      <input type="radio" name="name1" value="med" id="med">
+        <label for="med">Medium SUV</label>
+      <input type="radio" name="name1" value="big" id="big">
+        <label for="big">Big SUV</label>
+      </div>
+     </div>
 
     <div id="question2" class="hidden">
-    <p>What kind of driving will you be doing?</p>
-    <input type="radio" name="name2" value="city">City/suburb driving<br>
-    <input type="radio" name="name2" value="mountain">Mountain driving
+     <p><h4>What kind of driving will you be doing?</h4></p>
+    <input type="radio" name="name2" value="city" id="city">
+      <label for="city">City/suburb driving</label>
+    <input type="radio" name="name2" value="mountain" id="mountain">
+      <label for="mountain">Mountain driving</label>
     </div>
     
     <div id="question3" class="hidden">
-    <p>Which would you rather have?</p>
-    <input type="radio" name="name3" value="gas">Good gas milage<br>
-    <input type="radio" name="name3" value="performance">Performance
+    <p><h4>Which would you rather have?</h4></p>
+    <input type="radio" name="name3" value="gas" id="gas">
+      <label for="gas">Good gas milage</label>
+    <input type="radio" name="name3" value="performance" id="performance">
+      <label for="performance">Performance</label>
     </div>
     
     <div id="question4" class="hidden">
-    <p>How much do luxury features matter to you?</p>
-    <input type="radio" name="name4" value="save">I'd rather save money and have less luxury features<br>
-    <input type="radio" name="name4" value="luxury">I'd rather spend a little more and have luxury features.
+    <p><h4>How much do luxury features matter to you?</h4></p>
+    <input type="radio" name="name4" value="save" id="save">
+      <label for="save">I'd rather save money and have less luxury features</label>
+    <input type="radio" name="name4" value="luxury" id="luxury">
+      <label for="luxury">I'd rather spend a little more and have luxury features</label>
     </div>
-
-    <div id="prev" class="hidden"><button type="button">Previous</button></div>
-    <div id="next"><button type="button">Next</button></div>
-    <div id="startOver" class="hidden"><button type="button">Start Over</button></div>
+    
+   <div class="float_center">
+   <div class="child"> 
+    <div id="prev" class="hidden"><button type="button" class="btn btn-success">Previous</button></div>
+    <div id="next"><button type="button" class="btn btn-success">Next</button></div>
+    <div id="startOver" class="hidden"><button type="button" class="btn btn-warning">Start Over</button></div>
     <div><input id="submit" class="hidden" type="submit" value="submit"></div>
-    </form>  
-  </div>    
+     </div>
+     <div class="clear"></div>
+     </div>
+    </form><br><br><br>
+  </div>
+      </div>
+      <div class="col-md-2"></div>
+       </div>
+    </div>
   </body>
 </html>
