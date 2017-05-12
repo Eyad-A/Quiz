@@ -2,6 +2,29 @@
   display: none;
 }
 
+.btn {  
+  cursor: pointer;
+  width: 100px;
+}
+
+.btn-lg {
+  width: 200px;
+}
+
+.headline {
+  font-size: 3em;
+  color: #6A8E7F;
+}
+
+a:hover {
+  color: #95A3B3;
+  text-decoration: none;
+}
+
+.credit {
+  font-size: 0.7em;
+}
+
 .float_center {
   float: right;
   position: relative;
@@ -28,27 +51,33 @@
   margin: 3px;
 }
 
+#submit {
+  margin: 3px;
+}
+
 img {
   width: 100%;
 }
 
 .page-header {
-  background-color: orange;
+  background-color: #BACDB0;
   padding: 10px;
 }
 
 #suggestion {
-  background-color: gray;
-  padding: 10px;  
+  padding: 10px;
+  background-color: #BFBDC1;  
 }
 
 #main {
-  background-color: gray;
   padding: 10px;  
+  background-color: #BFBDC1;
 }
 
 body {
   font-family: 'Muli', sans-serif;
+  color: #333333;
+  line-height: 200%;
 }
 
 /* Hide those ugly radioboxes */
@@ -59,13 +88,8 @@ input[type=radio]{
 /**
  * How it should look when hovered
  */
-.active-label{
-  color: #e0758e;
-
-  &:before{
-    background: white;
-    border-color: #e0758e;
-  }
+label:hover {
+  color: #BACDB0;
 }
 
 /**
@@ -104,7 +128,7 @@ label{
  */
 input:checked + label{ 
   @extend .active-label;
-  background-color: #e0758e;
+  background-color: #BACDB0;
   color: white;
 
   &:before{
