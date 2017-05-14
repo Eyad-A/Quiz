@@ -95,7 +95,7 @@ label:hover {
 /**
  * Make those labels sexy
  */
-label{
+.label-fix{
   font-size: 1rem;
   font-weight: bold;
   line-height: 1;

@@ -420,10 +420,10 @@ prevButton.onclick = function() {
   if (question === 1) {
     //hide the prev button
     $(prevButton).addClass("hidden");
-  };
+  }
   if (question < maxQuestions) {
     $('#next').removeClass("hidden");
-  };
+  }
   //hide current question
   $('#question' + (question + 1)).addClass("hidden");
   //show the last question
@@ -442,7 +442,7 @@ startOverButton.onclick = function() {
   $('#question' + maxQuestions).addClass("hidden");
   suggestion.innerHTML = "";
   document.getElementById("form").reset();
-}
+};
 
 
 
@@ -464,7 +464,7 @@ const getElements = () => {
     suggestion: document.getElementById("suggestion"),
     suggestion2: document.getElementById("suggestion2")
   };  
-}
+};
 
 function submit(event) {
   event.preventDefault();

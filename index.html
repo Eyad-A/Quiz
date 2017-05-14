@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <title>What kind of car should I buy?</title>
   <link rel="stylesheet" href="stylesheet.css" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-  <script type="text/javascript" src="javascript.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">  
   </head>
   <body>
    <div class="container-fluid">     
@@ -23,40 +21,40 @@
       <p><h4>What size do you need?</h4></p>      
       <div>
       <input type="radio" name="name1" value="compact" id="compact">
-        <label for="compact">Compact</label>
+        <label class="label-fix" for="compact">Compact</label>
       <input type="radio" name="name1" value="mid" id="midsize">
-        <label for="midsize">Midsize</label>
+        <label class="label-fix" for="midsize">Midsize</label>
       <input type="radio" name="name1" value="small" id="small">
-        <label for="small">Small SUV</label>
+        <label class="label-fix" for="small">Small SUV</label>
       <input type="radio" name="name1" value="med" id="med">
-        <label for="med">Medium SUV</label>
+        <label class="label-fix" for="med">Medium SUV</label>
       <input type="radio" name="name1" value="big" id="big">
-        <label for="big">Big SUV</label>
+        <label class="label-fix" for="big">Big SUV</label>
       </div>
      </div>
 
     <div id="question2" class="hidden">
      <p><h4>What kind of driving will you be doing?</h4></p>
     <input type="radio" name="name2" value="city" id="city">
-      <label for="city">City/suburb driving</label>
+      <label class="label-fix" for="city">City/suburb driving</label>
     <input type="radio" name="name2" value="mountain" id="mountain">
-      <label for="mountain">Mountain driving</label>
+      <label class="label-fix" for="mountain">Mountain driving</label>
     </div>
     
     <div id="question3" class="hidden">
     <p><h4>Which would you rather have?</h4></p>
     <input type="radio" name="name3" value="gas" id="gas">
-      <label for="gas">Good gas milage</label>
+      <label class="label-fix" for="gas">Good gas milage</label>
     <input type="radio" name="name3" value="performance" id="performance">
-      <label for="performance">Performance</label>
+      <label class="label-fix" for="performance">Performance</label>
     </div>
     
     <div id="question4" class="hidden">
     <p><h4>How much do luxury features matter to you?</h4></p>
     <input type="radio" name="name4" value="save" id="save">
-      <label for="save">I'd rather save money and have less luxury features</label>
+      <label class="label-fix" for="save">I'd rather save money and have less luxury features</label>
     <input type="radio" name="name4" value="luxury" id="luxury">
-      <label for="luxury">I'd rather spend a little more and have luxury features</label>
+      <label class="label-fix" for="luxury">I'd rather spend a little more and have luxury features</label>
     </div>
     
    <div class="float_center">
@@ -64,7 +62,7 @@
     <div id="prev" class="hidden"><button type="button" class="btn btn-success">Previous</button></div>
     <div id="next"><button type="button" class="btn btn-success">Next</button></div>
     <div id="startOver" class="hidden"><button type="button" class="btn btn-success btn-lg">Start Over</button></div>
-    <div><input id="submit" class="hidden btn btn-success" type="submit" value="Submit"></div>
+    <div id="submit" class="hidden"><input class="btn btn-success" type="submit" value="Submit"></div>
      </div>
      <div class="clear"></div>
      </div>
@@ -75,5 +73,7 @@
       <div class="col-md-2"></div>
        </div>
     </div>
+  <script type="text/javascript" src="javascript.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </body>
 </html>
