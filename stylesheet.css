@@ -74,6 +74,11 @@ img {
   background-color: #BFBDC1;
 }
 
+#warning {
+  background-color: #009973;
+  color: white;
+}
+
 body {
   font-family: 'Muli', sans-serif;
   color: #333333;

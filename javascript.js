@@ -450,10 +450,10 @@ startOverButton.onclick = function() {
 
 
 
-const getElements = () => {
-  const checkedValue = selector => (
-  document.querySelector('input[name = "' + selector + '"]:checked').value
-  );
+const getElements = function getElements() {
+  const checkedValue = function checkedValue(selector) {
+  return document.querySelector('input[name = "' + selector + '"]:checked').value;
+  };
   
   return {
     name1: checkedValue('name1'),
@@ -475,25 +475,28 @@ function submit(event) {
   $('#question' + question).addClass("hidden");
   $('#startOver').removeClass("hidden");
   
-  const {
-    name1,
-    name2,
-    name3,
-    name4,
-    suggestion
-  } = getElements();
+  const _getElements = getElements();
+
+const name1 = _getElements.name1;
+const name2 = _getElements.name2;
+const name3 = _getElements.name3;
+const name4 = _getElements.name4;
+const suggestion = _getElements.suggestion;
   
-  const result = cars.find(({
-    requirements
-  }) => (
-  requirements.name1 === name1 &&
-  requirements.name2 === name2 &&
-  requirements.name3 === name3 &&
-  requirements.name4 === name4
-  ));
+  const result = cars.find(function (_ref) {
+    const requirements = _ref.requirements;
+    return requirements.name1 === name1 && requirements.name2 === name2 && requirements.name3 === name3 && requirements.name4 === name4;
+});
   
   suggestion.innerHTML = result.car;  
   
 }
 
 document.getElementById("form").addEventListener("submit", submit);
+
+//Check for IE users
+var isIE = !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g);
+
+if(isIE){
+ document.getElementById("warning").innerHTML = "You're using Internet Explorer which is not supported. Please consider using Chrome, Firefox, or Safari";
+};
